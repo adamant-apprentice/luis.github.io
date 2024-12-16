@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prata&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.2rem;
+    min-width: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #495057;
+
+}
+
+header {
+    background-color: #ced4da;
+    height: 50vh;
+}
+
+main {
+    background-color: #e9ecef;
+
+}
+
+.title-nav {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 3%;
+}
+
+.title-nav span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-left-style: solid;
+    border-top-style: solid;
+    border-width: 1px;
+    padding-left: 1%;
+}
+
+.title-nav a {
+    color: #495057;
+    transition: color 0.5s ease;
+}
+
+.title-nav a:hover {
+    color: #333;
+}
+
+
+.title-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vh;
+}
+
+.title-nav ul li {
+    font-size: 1.5rem;
+}
+
+.title-nav ul li a:after {
+    content: '';
+    margin: auto;
+    height:2px;
+    width:0;
+    display: block;
+    background-color: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease;
+    padding: 0;
+}
+.title-nav ul li a:hover:after {
+    width: 100%;
+    background: #333;
+}
+
+.title-nav ul li a {
+    text-decoration: none;
+    color: #777;
+    transition: 0.5s;
+}
+
+.title-nav ul li a:hover {
+    color: #333;
+}
+
+.description p {
+    font-size: 2.3rem;
+    font-family: "Source Sans 3", serif;
+}
+
+.description {
+    margin: 10% auto;
+    width: 80%;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-width: 1px;
+    padding-bottom: 1%; 
+    
+}
+
+.description p span {
+    font-weight: bold;
+}
+
+/* skills  */
+
+.skills ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.skills ul li span{
+    width: 15%;
+    text-align: center;
+}
+.skills img {
+    height: 3em;
+    width: 3em;
+    transition: 0.3s;
+}
+
+.skills img:hover {
+    transform: scale(1.2)
+}
+
+article section div ul {
+    list-style: none;
+}
+
+.overall {
+    height: 15px;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.completed {
+    width: 0%;
+    height: 15px;
+    background-color: #555;
+    transition: width 1s ease;
+}
+
+li a:hover ~ .overall .completed {
+    width: 98%; 
+}
+
+section {
+    display: flex;
+    
+}
+
+.skills, .projects {
+    width: 50%;
+    height: 40vh;
+    padding: 1%;
+}
+
+/* projects */
+
+.projects {
+    background-color: #f8f9fa;
+}
+
+.carousel {
+    position: relative;
+    margin: 0 auto;
+    width: 28em;
+    height: 19em;
+    overflow: hidden;
+}
+
+.carousel img {
+    width: 28em;
+    height: 19em;
+    object-fit: cover;
+    position: absolute;
+    transition: 3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28em;
+    height: 19em;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.300);
+}
+
+.text {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 2.0rem;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+
+.carousel:hover > img {
+    transform: scale(1.2);
+    opacity: 1;
+}
